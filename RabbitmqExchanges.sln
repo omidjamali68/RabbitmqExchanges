@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService", "BasketService\BasketService.csproj", "{1FF429B2-04B7-46A3-81D5-CAF1E5EAFAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{FD0D7DA8-F0F4-4238-B5B0-75597CD9DD63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FF429B2-04B7-46A3-81D5-CAF1E5EAFAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF429B2-04B7-46A3-81D5-CAF1E5EAFAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF429B2-04B7-46A3-81D5-CAF1E5EAFAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF429B2-04B7-46A3-81D5-CAF1E5EAFAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0D7DA8-F0F4-4238-B5B0-75597CD9DD63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0D7DA8-F0F4-4238-B5B0-75597CD9DD63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0D7DA8-F0F4-4238-B5B0-75597CD9DD63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0D7DA8-F0F4-4238-B5B0-75597CD9DD63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBF0C7F3-ABB5-4C05-8343-AC6DE1F525C4}
+	EndGlobalSection
+EndGlobal
