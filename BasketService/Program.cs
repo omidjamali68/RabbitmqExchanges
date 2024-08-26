@@ -6,11 +6,13 @@ factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
 var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
 
-channel.QueueDeclare("order.create", true, false, false, null);
-string message = $"Send shopping card basket to order service {DateTime.UtcNow}";
-var body = Encoding.UTF8.GetBytes(message);
+channel.ExchangeDeclare("order.fanout", ExchangeType.Fanout, true);
+
+var body = Encoding.UTF8.GetBytes(
+    $"Send shopping card basket to order service {DateTime.UtcNow}");
 
 var properties = channel.CreateBasicProperties();
 properties.Persistent = true;
-// exchange:"" => Direct exchange
-channel.BasicPublish(exchange:"", routingKey:"order.create", basicProperties: properties, body: body);
+
+channel.BasicPublish(
+    exchange: "order.fanout", routingKey:"", basicProperties: properties, body: body);
