@@ -7,10 +7,10 @@ factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
 var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
 
-string queueName = "order.create";
+string queueName = "orderService";
 
 channel.QueueDeclare(queueName, true, false, false, null);
-channel.QueueBind(queueName, "order.fanout", "");
+channel.QueueBind(queueName, "order.topic", "order.*");
 
 var consumer = new EventingBasicConsumer(channel);
 consumer.Received += (sender, args) =>
